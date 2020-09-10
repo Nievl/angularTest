@@ -1,0 +1,10 @@
+<h2>User list</h2>
+
+<mat-selection-list role="list" class="list_users">
+  <mat-list role="listitem" *ngFor="let user of userList" class="user_item">
+    <div>{{ user.full_name }}</div>
+    <button mat-raised-button mat-dialog-close (click)="selectUser(user)">
+      Edit
+    </button>
+  </mat-list>
+</mat-selection-list>

@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Change full name of {{ user.username }}</h1>
+<form (ngSubmit)="Submit($event)">
+  <div mat-dialog-content class="user_dialog">
+    <div>Old name: {{ user.full_name }}</div>
+    <mat-form-field class="example-full-width">
+      <input matInput [formControl]="fullName" />
+      <mat-error
+        *ngIf="fullName.hasError('minlength') || fullName.hasError('required')"
+      >
+        min name is 5 letters!
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="user_dialog_actions">
+    <button mat-raised-button mat-dialog-close>Close</button>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </div>
+</form>

@@ -1,0 +1,16 @@
+.user_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 400px;
+  border: 1px solid gray;
+  &:not(:last-child) {
+    border-bottom: unset;
+  }
+  padding: 1rem;
+}
+.list_users {
+  &:focus {
+    outline: unset;
+  }
+}
